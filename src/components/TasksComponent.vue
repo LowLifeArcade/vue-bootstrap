@@ -1,11 +1,16 @@
 <template>
   <div :key="task.id" v-for="task in tasks">
-    <h3>{{ task.day }}</h3>
+    <task-comp :task="task" />
   </div>
 </template>
 
 <script>
+import TaskComp from './TaskComp.vue';
+
 export default {
+  components: {
+    TaskComp,
+  },
   name: 'tasks-component',
   props: {
     tasks: Array,

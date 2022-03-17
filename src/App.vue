@@ -11,6 +11,13 @@
           <div>Settings</div>
         </div>
       </nav>
+      <div class="container">
+        <div style="height: 125px" class="row align-items-center">
+          <div class="col">Hi</div>
+          <div class="col">Hi</div>
+          <div class="col">Hij</div>
+        </div>
+      </div>
       <section class="col-8">
         <div class="container bg-white h-75 mt-2">
           {{ counter }}
@@ -62,7 +69,6 @@
       </aside>
     </div>
   </div>
-  
 
   <FooterComponent />
 </template>
