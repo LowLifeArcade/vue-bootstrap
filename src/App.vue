@@ -11,13 +11,14 @@
           <div>Settings</div>
         </div>
       </nav>
-      <div class="container">
+      <!-- <div class="container">
         <div style="height: 125px" class="row align-items-center">
           <div class="col">Hi</div>
           <div class="col">Hi</div>
-          <div class="col">Hij</div>
+          <div class="col">Hi</div>
         </div>
-      </div>
+      </div> -->
+
       <section class="col-8">
         <div class="container bg-white h-75 mt-2">
           {{ counter }}
@@ -27,8 +28,17 @@
           deleniti, saepe numquam consectetur?
         </div>
       </section>
+
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="col-3 d-flex justify-content-center">Avatar</div>
+          <div class="col-3 d-flex justify-content-center">Avatar</div>
+          <div class="col-3 d-flex justify-content-center">Avatar</div>
+        </div>
+      </div>
+
       <article class="col-8 p-2">
-        <TasksComponent :tasks="tasks" />
+        <!-- <TasksComponent :tasks="tasks" /> -->
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum et
         repellat velit molestiae amet, autem omnis harum explicabo dolorem quis
         quo facere laboriosam delectus nisi ad aspernatur nihil, blanditiis
@@ -60,13 +70,7 @@
         reprehenderit adipisci, ipsum id iusto. Ducimus nesciunt beatae error,
         earum distinctio rerum, atque natus quod asperiores voluptate alias a.
       </article>
-      <aside class="col-4 bg-info p-4 mt-4 shadow h-25">
-        <h2>Dear Reader</h2>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate
-        dolores culpa possimus excepturi, nulla provident rerum quia soluta
-        doloremque consectetur consequatur quod! Velit soluta dicta possimus rem
-        quam, aut ut.
-      </aside>
+      <AsideComp />
     </div>
   </div>
 
@@ -77,7 +81,8 @@
 import FooterComponent from './components/FooterComponent.vue';
 import NavBar from './components/NavBar.vue';
 import NavItem from './components/NavItem.vue';
-import TasksComponent from './components/TasksComponent.vue';
+// import TasksComponent from './components/TasksComponent.vue';
+import AsideComp from './components/AsideComp.vue';
 
 export default {
   name: 'App',
@@ -85,7 +90,8 @@ export default {
     FooterComponent,
     NavBar,
     NavItem,
-    TasksComponent,
+    // TasksComponent,
+    AsideComp,
   },
   data() {
     return {

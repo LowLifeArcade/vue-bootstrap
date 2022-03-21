@@ -1,10 +1,17 @@
 <script setup>
 import { defineProps } from 'vue';
 const props = defineProps({
-  message: String});
-</script>
+  task: Object,
+});
+
+let message = 'hi';
+
+function day() {
+  message = message == 'hi' ? 'gotcha' : 'hi';
+  console.log()
+}
+
 /**
-<div>
 // export default {
 //   name: 'TaskComp',
 //   props: {
@@ -21,11 +28,12 @@ const props = defineProps({
 //     },
 //   },
 // };
-// </div>
+*/
+</script>
 
 <template>
-  <h3>{{ task.day }}</h3>
-  <p role="button" @click="day">{{ props.message }}</p>
+  <h3>{{ props.task.day }}</h3>
+  <p role="button" @click="day" v-if="message">{{ message }}</p>
 </template>
 
 <style></style>
